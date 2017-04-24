@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="FantasyGame">
+  <ClassDiagramComponents>
+    <Class name="Arztzimmer" package="" visibility="public" xPosition="528.0" yPosition="241.0">
+      <Fields>
+        <Field name="fplaetze" type="int" visibility="private"/>
+        <Field name="wartezimmer" type="ArrayList&lt;Mensch&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="istBesetzt" returnType="boolean" visibility="public"/>
+        <Method name="istgeschlossen" returnType="boolean" visibility="public"/>
+        <Method name="addpatient" returnType="boolean" visibility="public">
+          <Argument type="Mensch" name="amensch"/>
+        </Method>
+        <Method name="behnadelpatient" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Auto" package="" visibility="public" xPosition="1319.0" yPosition="570.0">
+      <Fields>
+        <Field name="fFarbe" type="String" visibility="private"/>
+        <Field name="fFahrer" type="Mensch" visibility="private"/>
+        <Field name="fGeschwindigkeit" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="aFarbe"/>
+          <Argument type="String" name="aHersteller"/>
+          <Argument type="double" name="aPferdestaerken"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setFarbe" returnType="void" visibility="public">
+          <Argument type="String" name="aFarbe"/>
+        </Method>
+        <Method name="setFahrer" returnType="boolean" visibility="public">
+          <Argument type="Mensch" name="aFahrer"/>
+        </Method>
+        <Method name="setGeschwindigkeit" returnType="void" visibility="public">
+          <Argument type="double" name="aGeschwindigkeit"/>
+        </Method>
+        <Method name="getFarbe" returnType="String" visibility="public"/>
+        <Method name="getHersteller" returnType="String" visibility="public"/>
+        <Method name="getFahrer" returnType="Mensch" visibility="public"/>
+        <Method name="getGeschwindigkeit" returnType="double" visibility="public"/>
+        <Method name="getPferdesaerken" returnType="double" visibility="public"/>
+        <Method name="abbiegen" returnType="void" visibility="public"/>
+        <Method name="bremsen" returnType="void" visibility="public"/>
+        <Method name="beschleunigen" returnType="void" visibility="public">
+          <Argument type="double" name="ageschw"/>
+        </Method>
+        <Method name="streckenzuwachs" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gebaude" package="" visibility="public" xPosition="954.0" yPosition="438.0">
+      <Fields>
+        <Field name="fgroesse" type="double" visibility="public"/>
+        <Field name="flage" type="String" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Held" package="" visibility="public" xPosition="600.0" yPosition="-115.0">
+      <Fields>
+        <Field name="fsaubereWaesche" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ahaarfarbe"/>
+          <Argument type="String" name="averletzung"/>
+          <Argument type="String" name="aheldenkraft"/>
+          <Argument type="double" name="agroesse"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getsaubereWaesche" returnType="boolean" visibility="public"/>
+        <Method name="setsaubereWaesche" returnType="void" visibility="public">
+          <Argument type="boolean" name="asauberewaesche"/>
+        </Method>
+        <Method name="fliegen" returnType="void" visibility="public"/>
+        <Method name="verteidigen" returnType="void" visibility="public">
+          <Argument type="Mensch" name="aMensch"/>
+        </Method>
+        <Method name="autofahren" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mensch" package="" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="fhaarfarbe" type="String" visibility="private"/>
+        <Field name="fheldenkraft" type="String" visibility="private"/>
+        <Field name="fgroesse" type="double" visibility="private"/>
+        <Field name="fverletzung" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ahaarfarbe"/>
+          <Argument type="String" name="averletzung"/>
+          <Argument type="String" name="aheldenkraft"/>
+          <Argument type="double" name="agroesse"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="gethaarfarbe" returnType="String" visibility="public"/>
+        <Method name="getheldenkraft" returnType="String" visibility="public"/>
+        <Method name="getGroesse" returnType="double" visibility="public"/>
+        <Method name="getverletzung" returnType="String" visibility="public"/>
+        <Method name="sethaarfarbe" returnType="void" visibility="public">
+          <Argument type="String" name="ahaarfarbe"/>
+        </Method>
+        <Method name="setheldenkraft" returnType="void" visibility="public">
+          <Argument type="String" name="aheldenkraft"/>
+        </Method>
+        <Method name="setgroesse" returnType="void" visibility="public">
+          <Argument type="double" name="agroesse"/>
+        </Method>
+        <Method name="setverletzung" returnType="void" visibility="public">
+          <Argument type="String" name="averletzung"/>
+        </Method>
+        <Method name="sprechen" returnType="void" visibility="public"/>
+        <Method name="laufen" returnType="void" visibility="public"/>
+        <Method name="Kriechen" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tyran" package="" visibility="public" xPosition="1797.0" yPosition="86.0">
+      <Fields>
+        <Field name="fVernarbtesGesicht" type="boolean" visibility="private"/>
+        <Field name="fFehlendeGliedmassen" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ahaarfarbe"/>
+          <Argument type="String" name="averletzung"/>
+          <Argument type="String" name="aheldenkraft"/>
+          <Argument type="double" name="agroesse"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setverletzung" returnType="void" visibility="public">
+          <Argument type="String" name="averletzung"/>
+          <Argument type="boolean" name="agesicht"/>
+          <Argument type="boolean" name="agliedmassen"/>
+        </Method>
+        <Method name="getVernarbtesGesicht" returnType="boolean" visibility="public"/>
+        <Method name="getFehlendeGliedmassen" returnType="boolean" visibility="public"/>
+        <Method name="Streiten" returnType="void" visibility="public"/>
+        <Method name="Pluendern" returnType="void" visibility="public"/>
+        <Method name="Autofahren" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Arztzimmer" target="Mensch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Arztzimmer" target="Gebaude"/>
+    <IsRelation name="is" source="Tyran" target="Mensch"/>
+    <IsRelation name="is" source="Held" target="Mensch"/>
+    <HasRelation name="fFahrer" source="Auto" target="Mensch" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Held" target="Mensch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Auto" target="Mensch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="wartezimmer" source="Arztzimmer" target="Mensch" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Mensch&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
